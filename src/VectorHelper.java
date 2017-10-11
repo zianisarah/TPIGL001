@@ -3,4 +3,6 @@
  */
 public class VectorHelper {
 
+
+    void fonction(){};
 }
