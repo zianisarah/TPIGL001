@@ -22,7 +22,7 @@ public class VectorHelper {      /* La classe represente un seul Vecteur*/
     public void intvecteur(){                    /*   initialise les valeur d un vecteur   */
 
         Scanner sc=new Scanner(System.in);
-        System.out.println("Donnez la Taille du vecteur ");
+        System.out.println("Donnez la Taille du vecteur : ");
         this.vlength=sc.nextInt();
         this.vecteur=new int[vlength];
         int i;
@@ -35,7 +35,7 @@ public class VectorHelper {      /* La classe represente un seul Vecteur*/
 
     public void afficherVEc()         /* afficher les valeur d un vecteur V*/
     {   int i;
-    System.out.println();
+        System.out.println();
         for (i=0;i<vlength;i++){System.out.print("|"+vecteur[i]+"|");}
     }
 
