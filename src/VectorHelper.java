@@ -39,18 +39,36 @@ public class VectorHelper {      /* La classe represente un seul Vecteur*/
         for (i=0;i<vlength;i++){System.out.print("|"+vecteur[i]+"|");}
     }
 
-    public int max ( int vect[])   /* .........la fonction qui va définir le max........*/
+    public int max ()   /* .........la fonction qui va définir le max........*/
     {
-        triervect(vect);       /*.....appele de la fonction de tri....*/
-        return vect[vlength];
+        triervect();       /*.....appele de la fonction de tri....*/
+        return vecteur[vlength];
     }
 
-    public int min ( int vect[])     /*.....la fonction qui définie le min....*/
+    public int min ( )     /*.....la fonction qui définie le min....*/
     {
-        triervect(vect);
-        return vect[0];
+        triervect();
+        return vecteur[0];
     }
 
 
 
+
+    public void triervect(){
+
+
+        int i,k,m;
+
+        for(i=0;i<vlength;i++){
+            for(k=vlength-1;k>i;k--){
+                if (vecteur[k]<vecteur[k-1]){
+                    m=vecteur[k];
+                    vecteur[k]=vecteur[k-1];
+                    vecteur[k-1]=m;
+                }
+            }
+        }
+
+
+    }
 }
