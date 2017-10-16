@@ -71,7 +71,20 @@ public class VectorHelper {      /* La classe represente un seul Vecteur*/
 
 
     }
-      switch (choix) {
+     void vect_formule() {
+        System.out.println(" Entrez l'operation que vous voulez effectuer sur votre vecteur : ");
+
+        System.out.println(" --> Pour l'addition tapez ' 1 ' ");
+        System.out.println("   --> pour la multuplication tapez ' 2 ' ");
+        System.out.println("     --> Pour la division tapez ' 3 ' ");
+        System.out.println("       --> Pour soustraction tapez ' 4 ' ");
+        Scanner sc = new Scanner(System.in);
+        int choix = sc.nextInt();
+        System.out.println(" Entrer votre nombre : ");
+        Scanner sc1 = new Scanner(System.in);
+        int nombre = sc1.nextInt();
+
+        switch (choix) {
             case 1:
 
                 for (int i= 0; i < vlength; i++) {
@@ -103,4 +116,5 @@ public class VectorHelper {      /* La classe represente un seul Vecteur*/
 
 
     }
+      
 }
