@@ -71,4 +71,47 @@ public class VectorHelper {      /* La classe represente un seul Vecteur*/
 
 
     }
+
+
+    public VectorHelper SomVEC(VectorHelper V1)
+    {
+        if(this.vlength!=V1.getVlength())
+        {
+            System.out.println("Les Vecteurs N'ont pas la meme Taille");
+            return null;
+        }
+
+        else {
+            VectorHelper resultat = new VectorHelper();
+            int Vresult[]=new int[vlength];
+            int i=0;
+            for(i=0;i<vlength;i++){Vresult[i]=this.vecteur[i]+V1.getcase(i);}
+            resultat.setVecteur(Vresult);
+            resultat.setVlength(vlength);
+
+            return resultat;
+        }
+    }
+
+
+
+
+    public void invVEC() {
+        int i=vlength/2;
+
+        int k,m;
+        for(k=0;k<i;k++){
+
+            m=vecteur[k];
+            vecteur[k]=vecteur[vlength-1-k];
+            vecteur[vlength-1-k]=m;
+        }
+    }
+
+
+
+
+
+
+
 }
