@@ -51,7 +51,7 @@ public class VectorHelper {      /* La classe represente un seul Vecteur*/
         return vecteur[0];
     }
 
-
+   
 
 
     public void triervect(){
@@ -67,6 +67,38 @@ public class VectorHelper {      /* La classe represente un seul Vecteur*/
                     vecteur[k-1]=m;
                 }
             }
+        }
+
+
+    }
+      switch (choix) {
+            case 1:
+
+                for (int i= 0; i < vlength; i++) {
+                    vecteur[i] = vecteur[i] + nombre;
+              
+                }break;
+            case 2:
+
+                for (int i = 0;i < vecteur.length;i++) {
+                    vecteur[i]=vecteur[i]*nombre;
+                   
+                }break;
+
+            case 3:
+                try {
+                    for (int i = 0; i < vecteur.length; i++) {
+                        vecteur[i] = vecteur[i]/nombre;
+                    }
+                } catch (ArithmeticException e) {
+                    System.out.println("ERREUR !!!!!!! Devision par zero");
+                }break;
+            case 4:
+
+                for (int i = 0; i < vecteur.length; i++) {
+                    vecteur[i] = vecteur[i]-nombre;
+                }break;
+
         }
 
 
